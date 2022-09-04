@@ -8,7 +8,203 @@
     <link rel="stylesheet" href="index.scss" />
   </head>
   <body>
-    <div class="test">test</div>
+    <div class="container">
+      <header>
+        <div class="image">
+          <img src="images/profile_pic.jpeg" alt="dorinela-logo" />
+        </div>
+        <div class="name">
+          <h1>tudor &nbsp;&nbsp;dorinela</h1>
+          <div>Front-end web developer</div>
+        </div>
+      </header>
+
+      <div class="wrapper">
+        <aside>
+          <div class="contact">
+            <p>
+              <b>ADDRESS: </b
+              ><a
+                href="https://www.google.com/maps/place/Bucharest"
+                target="_blank"
+                >Bucharest, Romania</a
+              >
+            </p>
+            <p>
+              <b>PHONE: </b
+              ><a href="tel:+40763312946" target="_blank">+40763 312 946</a>
+            </p>
+            <p>
+              <b>EMAIL: </b
+              ><a href="mailto:tudordorinela@gmail.com" target="_blank"
+                >tudordorinela@gmail.com</a
+              >
+            </p>
+            <p>
+              <b>PORTFOLIO: </b
+              ><a href="https://dorinela.ro" target="_blank">www.dorinela.ro</a>
+            </p>
+            <p class="icons">
+              <a href="https://github.com/DoriTD" target="_blank">
+                <img src="images/github.svg" alt="github" />
+                <span>github.com/DoriTD</span></a
+              >
+              <a href="skype:live:dori.tudor?chat" target="_blank">
+                <img src="images/skype.svg" alt="skype" /><span
+                  >live:dori.tudor</span
+                ></a
+              >
+              <a
+                href="https://www.linkedin.com/in/dorinela-tudor/"
+                target="_blank"
+              >
+                <img src="images/linkedin.svg" alt="linkedin" /><span
+                  >in/dorinela-tudor</span
+                ></a
+              >
+            </p>
+          </div>
+          <div class="education">
+            <h3>EDUCATION</h3>
+            <div>
+              <h3>Geology and Geophysics</h3>
+              <i>University of Bucharest</i><br />
+              <i>2006-2010</i>
+            </div>
+            <div>
+              <h3>Mathematics/Informatics</h3>
+              <i>"Carol I" Highschool, Fetesti</i><br />
+              <i>2002-2006</i>
+            </div>
+          </div>
+        </aside>
+        <div class="border"></div>
+        <section class="content">
+          <article>
+            <h3>INTRODUCTION</h3>
+            <div>
+              <span
+                >I am a Front-end developer passionate about the web and
+                creating an amazing user-experience. I have a strong knowledge
+                of the inner workings of the web and the ability to bring
+                websites to life from a mock-up to a fully functional web app.
+              </span>
+            </div>
+          </article>
+          <article class="experience">
+            <h3>EXPERIENCE</h3>
+            <div>
+              <h4>Front-end developer at <i>beeanco</i></h4>
+              <i>01/2020-present</i>
+              <p>
+                Developing and maintaining height performance and adaptive
+                modules. <br />
+                Write clean, well structured maintainable code that conforms
+                with accepted standards. <br />
+                Technologies used: <br />
+                JavaScript/TypeScript, Svelte with Sapper, SCSS for styling
+                (using Bulma), MySQL, GraphQL, Redis, Elasticsearch, CircleCI,
+                Docker, WordPress;
+                <br />
+              </p>
+            </div>
+
+            <div>
+              <h4>
+                Front-end developer - Training Course at
+                <i>Coders Lab IT Academy</i>
+              </h4>
+              <i>09/2019-11/2019</i>
+              <p>
+                Developing a strong base of knowledge related to front-end
+                development. <br />
+                Technologies used: HTML & CSS (including SASS), JavaScript,
+                jQuery, Ajax, React, Git, Gulp, Webpack, NPM.
+              </p>
+            </div>
+
+            <div>
+              <h4>Logistics operator</h4>
+              <p>
+                Various jobs in the Logistics industry prior to switching
+                carriers.
+              </p>
+            </div>
+          </article>
+          <article class="projects">
+            <h3>COOL THINGS I MADE</h3>
+            <div>
+              <a href="https://beehivve.com/" target="_blank"> beehivve.com </a>
+              <span
+                >Presentation website build with Svelte, Sapper and Firebase.
+              </span>
+            </div>
+
+            <div>
+              <a href="https://furniture-site-dori.web.app/" target="_blank">
+                furniture-site
+              </a>
+              <span
+                >An e-commerce application build with React and SCSS (styled
+                components), using Webpack and a Firebase back-end.</span
+              >
+            </div>
+
+            <div>
+              <a href="https://doritd.github.io/test-tehnic/" target="_blank">
+                tech-test
+              </a>
+              <span
+                >A webpage build for a technical interview based on a given psd,
+                implemented pixel perfect using SCSS.
+              </span>
+            </div>
+
+            <div>
+              <a
+                href="https://doritd.github.io/furry-game-react/"
+                target="_blank"
+              >
+                furry-game
+              </a>
+              <span>A simple game written in React.</span>
+            </div>
+          </article>
+          <article>
+            <h3>SKILLS</h3>
+            <div class="skills">
+              <div class="skill">
+                <span> HTML/CSS </span>
+                <div class="circle" data-procentaje="100"></div>
+              </div>
+              <div class="skill">
+                <span> JavaScript </span>
+                <div class="circle" data-procentaje="60"></div>
+              </div>
+              <div class="skill">
+                <span> Svelte </span>
+                <div class="circle" data-procentaje="70"></div>
+              </div>
+              <div class="skill">
+                <span> React </span>
+                <div class="circle" data-procentaje="50"></div>
+              </div>
+
+              <div class="skill">
+                <span> JQuery </span>
+                <div class="circle" data-procentaje="80"></div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+    <span></span>
+    <script>
+      window.addEventListener('load', function () {
+        document.querySelector('body > .container').classList.add('loaded');
+      });
+    </script>
     <script type="module" src="index.ts"></script>
   </body>
 </html>

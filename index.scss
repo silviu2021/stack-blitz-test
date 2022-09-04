@@ -1,7 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+//color: #FBFBFB;
+$primaryColor: #013872;
+$secondaryColor: #00bdd6;
+$neutralColor: rgb(230, 230, 230);
 body {
-  background-color: green;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
   margin: 0;
-  .test {
-    background-color: pink;
+}
+.container {
+  width: 1024px;
+  padding: 20px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-width: 20px;
+  border-image-source: linear-gradient(to top, $secondaryColor, $primaryColor);
+  position: relative;
+  margin: 0 auto;
+  @media print {
+    height: 1483px;
+  }
+  header {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div.image {
+      width: 200px;
+      margin-left: 15px;
+      img {
+        width: 200px;
+        height: 200px;
+        filter: grayscale(100%);
+        border-radius: 50%;
+      }
+    }
+    div.name {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      color: #6e6e6e;
+      h1 {
+        font-size: 3em;
+        font-weight: 300;
+      }
+      div {
+        color: #66a8dc;
+        font-size: 1.2em;
+      }
+    }
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    aside {
+      width: 650px;
+      padding: 40px 20px 20px 0;
+      .contact {
+        a {
+          text-decoration: none;
+          color: black;
+          font-style: italic;
+        }
+        .icons {
+          padding-top: 30px;
+          a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 15px;
+
+            img {
+              height: 30px;
+              padding-right: 40px;
+            }
+          }
+        }
+      }
+    }
+    .border {
+      width: 5px;
+      margin-top: 70px;
+      background-image: linear-gradient(
+        0deg,
+        #fff 0%,
+        $secondaryColor 50%,
+        $primaryColor 100%
+      );
+    }
+    .content {
+      padding: 40px 10px 20px 20px;
+      article {
+        margin-bottom: 50px;
+        h3 {
+          position: relative;
+          &::before {
+            content: ' ';
+            width: 11px;
+            height: 11px;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            position: absolute;
+            top: 7px;
+            left: -27px;
+          }
+        }
+        &.experience {
+          h4 {
+            margin-bottom: 0;
+          }
+        }
+        &.projects {
+          div {
+            display: flex;
+            margin-bottom: 15px;
+            a {
+              color: black;
+              font-weight: 600;
+              font-style: italic;
+              width: 150px;
+              display: inline-block;
+            }
+            span {
+              display: inline-block;
+              width: 500px;
+            }
+          }
+        }
+        .skills {
+          display: flex;
+          justify-content: space-between;
+          .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+              padding-bottom: 25px;
+              padding-top: 25px;
+            }
+            .circle {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              background: conic-gradient($secondaryColor, $primaryColor);
+              z-index: 1;
+              position: relative;
+              &::after {
+                content: ' ';
+                z-index: 3;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #fff;
+              }
+              &::before {
+                content: ' ';
+                z-index: 2;
+                position: absolute;
+                top: -1px;
+                right: -1px;
+                width: 62px;
+                height: 62px;
+                border-radius: 50%;
+              }
+
+              @for $i from 1 through 100 {
+                &[data-procentaje='#{$i}'] {
+                  &::before {
+                    background: conic-gradient(
+                      transparent $i * 1%,
+                      $neutralColor 0
+                    );
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
